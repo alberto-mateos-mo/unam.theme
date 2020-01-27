@@ -10,7 +10,6 @@ theme_unam <- function(){
                     unam_rojo <<- "#7A002B",
                     unam_verde <<- "#2B7A00",
                     unam_magenta <<- "#7A0068",
-                    unam_cafe <<- "#7A0068",
                     unam_verde2 <<- "#007A12",
                     unam_azul2 <<- "#12007A",
                     unam_morado <<- "#4F007A",
