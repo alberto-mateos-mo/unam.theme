@@ -19,7 +19,7 @@ theme_unam <- function(){
                     unam_oro <<- "#D59F0F"
                     )
 
-  unam <- ggthemr::define_palette(swatch = unam_colours,
+  unam <- ggthemr::ggthemr(swatch = unam_colours,
                                   gradient = c(lower = "#DFE4EE", upper = "#002B7A"),
                                   background = "#000000")
 
