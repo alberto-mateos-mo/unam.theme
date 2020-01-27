@@ -19,11 +19,11 @@ theme_unam <- function(){
                     unam_oro <<- "#D59F0F"
                     )
 
-  unam <- ggthemr::ggthemr(swatch = unam_colours,
+  unam <- ggthemr::ggthemr_palette(swatch = unam_colours,
                                   gradient = c(lower = "#DFE4EE", upper = "#002B7A"),
                                   background = "#000000")
 
-  ggthemr::ggthemr_swatch(unam)
+  ggthemr::ggthemr(unam)
 
   theme_minimal() %+replace%
     theme(axis.line = element_line(colour = "#717171", arrow = grid::arrow(length = unit(1, "mm"))),
