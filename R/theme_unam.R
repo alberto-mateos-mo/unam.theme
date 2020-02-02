@@ -6,7 +6,8 @@
 
 theme_unam <- function(){
 
-  unam_colours <- c(unam_azul <<- "#002B7A",
+  unam_colours <- c("#000000",
+                    unam_azul <<- "#002B7A",
                     unam_rojo <<- "#7A002B",
                     unam_verde <<- "#2B7A00",
                     unam_magenta <<- "#7A0068",
