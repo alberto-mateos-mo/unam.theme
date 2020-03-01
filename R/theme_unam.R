@@ -17,7 +17,8 @@ theme_unam <- function(){
                     unam_rojo2 <<- "#7A1200",
                     unam_morado2 <<- "#31007A",
                     unam_magenta2 <<- "#6E007A",
-                    unam_oro <<- "#D59F0F"
+                    unam_oro <<- "#D59F0F",
+                    unam_cafe <<- "#AA8F47"
                     )
 
   unam <- ggthemr::ggthemr_palette(swatch = unam_colours,
@@ -26,7 +27,7 @@ theme_unam <- function(){
 
   ggthemr::ggthemr(unam)
 
-  theme_minimal() %+replace%
+  theme_minimal()+
     theme(axis.line = element_line(colour = "#717171", arrow = grid::arrow(length = unit(1, "mm"))),
           axis.title.y = element_text(angle = 90, hjust = 1, size = 8, vjust = 3),
           axis.title.x = element_text(angle = 0, hjust = 1, size = 8, vjust = -1),
