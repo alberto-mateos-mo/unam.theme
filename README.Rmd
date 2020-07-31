@@ -16,12 +16,12 @@ knitr::opts_chunk$set(
 # unam.theme
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 <!-- badges: end -->
 
 The goal of unam.theme is to provide a ggplot2 theme using UNAM's graphic identity.
 
-Academic use only.
+_Academic/Non-commercial use only._
 
 ## Installation
 
@@ -33,25 +33,40 @@ devtools::install_github("alberto-mateos-mo/unam.theme")
 ```
 ## Example
 
-The theme is used as follows:
+The custom theme and scales are used as follows:
 
 ```{r example, warning=FALSE}
 library(unam.theme)
 library(ggplot2)
 
 ggplot(iris)+
-  geom_point(aes(x = Sepal.Length, y = Petal.Length, colour = Species))+
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, colour = Species), size = 3)+
+  scale_colour_unam()+
   theme_unam()
 ```
 
-Plot using unam golden colour:
+Using secondary palette:
 
 ```{r, warning=FALSE}
 library(unam.theme)
 library(ggplot2)
 
 ggplot(iris)+
-  geom_point(aes(x = Sepal.Length, y = Petal.Length), colour = unam_oro)+
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, colour = Species), size = 3)+
+  scale_colour_unam(palette = "secondary")+
   theme_unam()
 ```
 
+Using a continuous scale:
+
+```{r, warning=FALSE}
+library(unam.theme)
+library(ggplot2)
+
+ggplot(iris)+
+  geom_point(aes(x = Sepal.Length, y = Petal.Length, colour = Petal.Width), size = 3)+
+  scale_colour_unam(palette = "basic", discrete = FALSE)+
+  theme_unam()
+```
+
+Note: UNAM's graphic image consists of at most three colours: #003D79, #D59F0F and #B6985E, additional colours were selected using [colormind.io](http://colormind.io/) site.

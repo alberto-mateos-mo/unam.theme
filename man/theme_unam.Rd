@@ -2,10 +2,10 @@
 % Please edit documentation in R/theme_unam.R
 \name{theme_unam}
 \alias{theme_unam}
-\title{UNAM theme}
+\title{UNAM custom theme}
 \usage{
 theme_unam()
 }
 \description{
-ggplot2 theme, UNAM style
+UNAM custom theme
 }
